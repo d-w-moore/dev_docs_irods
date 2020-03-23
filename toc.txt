@@ -1,0 +1,6 @@
+VMs
+
+virt-manager
+creating extra volume for /externals
+        parted
+
