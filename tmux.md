@@ -1,7 +1,29 @@
-TMUX - a handy text based UI for connecting / disconnecting / multiplexing
-terminal sessions.  (Like the older GNU screen but more modern)
+# TMUX
 
-## A simple configuration
+Description
+
+`tmux` is a text based UI for connecting / disconnecting / multiplexing
+to multiplex tty sessions within the same terminal window. It is similar
+to the older GNU screen but slightly more modern.
+
+`tmux` is useful tool when you'd like to
+  - keeping related TTY sessions together simultaneously visible 
+    (for example, during debugging)
+
+  - preserving a session  (in a way, a better `nohup`)
+    ^B-d will detach from a session
+
+Usage examples:
+---
+
+```
+tmux ls         - list available pre-existing sessions for attaching
+tmux a -t0      - attach to session #0
+tmux            - create a new session
+
+```
+
+---
 
 The following minimal `~/.tmux.conf` offers some extra conveniences
 
@@ -20,6 +42,9 @@ set-option -g history-limit 50000
 ```
 (C-<other_key> or ^+letter ) = Ctrl key combination
 (M-<other_key>)
+
+Ctrl-B "            Create new pane by diving terminal window vertically
+Ctrl-B %            Create new pane by diving terminal window horizontally
 Ctrl-B ?            help (enters copy mode)
 Ctrl-B x            kill pane
 Ctrl-B &            kill window
@@ -29,18 +54,20 @@ Ctrl-B D            select session to detach from a menu
                     the current session's ability to resize)
 ```
 
-## COPY mode
+---
 
+## COPY mode (for search 
 
 ```
 ^B [  ->enter copy mode
-        #----
+ESC   -> quit copy mode
+
+Within copy mode:
+        #
         #       BEGIN SELECTION:        Ctrl-Space            
         #       COPY                    Alt-W
         #       PASTE                   ^B ]                    
-        #       Ctrl-R reverse (upward) search
-        #       Ctrl-S forward (downward) search
-        #----
-ESC   ->quit copy mode
+        #       Ctrl-R                  reverse (upward) search
+        #       Ctrl-S                  forward (downward) search
 
 ```
