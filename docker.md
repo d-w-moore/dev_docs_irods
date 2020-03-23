@@ -17,3 +17,11 @@ Guides are available at DigitalOcean:
 
 
 ## docker-compose
+
+Docker compose is a utility which allows several docker instances (aka nodes
+or named services) to run as a cooperative unit, in effect by connecting them
+on a virtual network.
+
+Follow these [directions](https://docs.docker.com/compose/install/) to install.
+
+
