@@ -2,6 +2,8 @@
 
 In progress
 
+  - Building iRODS software with [CMake](./CMake.md)
+
   - [docker](./docker.md)
 
   - [tmux](./tmux.md)
