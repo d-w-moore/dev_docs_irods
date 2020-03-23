@@ -35,7 +35,7 @@ CLING
 
 GIT PROMPTS
 
-The following, if appended to ``~/.bashrc` , can be a convenience and time saver by 
+The following, if appended to ``~/.bashrc` , can be a convenience and time saver by
 reflecting the current time, the last command's exit status, and Git state information
 (assuming the CWD is within a local Git repo)
 
@@ -43,7 +43,7 @@ reflecting the current time, the last command's exit status, and Git state infor
 #------ This section needed in CentOS but not in Ubuntu:
         GITPROMPT=( {~,/usr/share/git-core/contrib/completion}/git-prompt.sh )
         for x in ${GITPROMPT[@]}; do [ -r $x ] && { source $x ; break; }; done
-        # If Download necessary or to fetch latest GIT prompt:
+        # If download is necessary, or to fetch latest GIT prompt:
         # $ cd; wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 #------ _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 function tgrps1 {
