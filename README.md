@@ -1,10 +1,24 @@
 # iRODS Development
 
-Contents
----
+In progress
 
-   - orientation, on Ubuntu/Linux based tools
+  - [docker](./docker.md)
 
-      1. docker development
-      1. debugger tools
+  - [tmux](./tmux.md)
+
+Todo
+
+  - testing
+    * CI how-to
+    * writing tests
+
+  - VMs , under virt-manager , on Ubuntu
+    * virt-manager
+    * creating extra volume for /externals
+        parted
+
+  - debugger tools
+    * GDB
+    * Valgrind
+    * Mozilla RR
 
