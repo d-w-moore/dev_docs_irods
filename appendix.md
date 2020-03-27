@@ -1,37 +1,7 @@
 
-DEBUGGING IN MIXED SOURCE / ASSEMBLY
-
 ```
-g++ -masm=intel -xc - -S -o-
-
- 1923  gcc -g `pwd`/aa.c
- 1924  ./Insight-90f2e23-x86_64.AppImage  `pwd`/a.out
-
-https://github.com/antony-jr/insight/releases/download/continuous/Insight-90f2e23-x86_64.AppImage
-./Insight-90f2e23-x86_64.AppImage  --appimage-extract
-
+tail -n +LINENUM -f ~irods/log/rodsLog20XX.YY.ZZ
 ```
-
----
-
-GENERATING LISTING OF SOURCE / ASSEMBLY (MIXED) FROM COMPILER
-
-   - ```
-     https://www.systutorials.com/generate-a-mixed-source-and-assembly-listing-using-gcc/
-     gcc -Wa,-adhln -g helloworld.c > helloworld.s
-     ```
-
----
-CLING
-
-  - [Brief description](
-    https://root.cern.ch/cling-brief
-    )
-
-  - [Downloads](
-    https://root.cern.ch/download/cling
-    )
-
 
 GIT PROMPTS
 
