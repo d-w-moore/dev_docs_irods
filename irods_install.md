@@ -8,18 +8,18 @@ A docker container can be used, but the first steps must be the installation of 
 
 ```
 $ docker run -it ubuntu:16.04
-(container) /# apt update &&  apt install git
-(container) /# git clone http://github.com/d-w-moore/ubuntu_irods_install && cd  ubuntu_irods_install
+(container) /# apt update &&  apt install -y git sudo
+(container) /# git clone http://github.com/d-w-moore/ubuntu_irods_installer && cd ubuntu_irods_installer
 ```
 We can then run through the phases in the diagram.
 
   - install prerequisites and set up `ICAT` database
   ```
-  (container) /ubuntu_irods_install# ./install.sh --w='config-essentials create-db' 0
+  (container) /ubuntu_irods_install# ./install.sh --w='config-essentials create-db add-package-repo' 0
   ```
   - install and set up iRODS
   ```
-  (container) /ubuntu_irods_install# ./install.sh --w='config-essentials -r 4 5
+  (container) /ubuntu_irods_install# ./install.sh -r 4 5
   ```
   - The container now has a running instance of the iRODS server.  We can become the `irods` (service account) user and issue an icommand of our choice, to test:
   ```
