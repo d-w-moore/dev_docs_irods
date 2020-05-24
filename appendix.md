@@ -58,13 +58,13 @@ The instructions below can enable useful annotations within the bash prompt:
 
 Do the following.
 
-  1. On Operating Systems other than Ubuntu this may be needed:
+  1. On some flavors of Linux OS (eg CentOS/RHEL 7) the definitions from this file will be needed, so download
+  to home directory via curl or wget:
 ```
-  $ cd; wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+  $ cd ; wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 ```
-  2. append this script text to the end of .bashrc
+  2. Then append this script text to the end of .bashrc
 ```
-# needed on CentOS7 and perhaps other OS'es:
 [ -r $HOME/git-prompt.sh ] && . $HOME/git-prompt.sh
 function tgrps1 {
   local BOLDRED="\[\033[1;31m\]"
