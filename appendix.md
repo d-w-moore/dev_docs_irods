@@ -62,12 +62,10 @@ Do the following.
 ```
   $ cd; wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 ```
-
-
+  2. append this script text to the end of .bashrc
 ```
-## on OS'es other than Ubuntu:
-#  source $HOME/git-prompt.sh # from the above step
-
+# needed on CentOS7 and perhaps other OS'es:
+[ -r $HOME/git-prompt.sh ] && . $HOME/git-prompt.sh
 function tgrps1 {
   local BOLDRED="\[\033[1;31m\]"
   local GREEN="\[\033[0;32m\]"
@@ -80,7 +78,6 @@ function tgrps1 {
   PS1+="$BOLDYELLOW\$(__git_ps1) "
   PS1+="$BOLDCYAN\u$NOCOLOR@\h:\w \$ "
 }
-
 tgrps1
 
 ```
