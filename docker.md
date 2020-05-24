@@ -9,11 +9,22 @@ Guides are available at DigitalOcean:
 "Cleaning Up" Recipes
 
   - delete unused images and their dependent layers
-
   ```
   $ X=$(docker image ls -f dangling=true -q)
   $ [ -n "$X" ] && docker image rm $X
   ```
+  - delete containers which are not running
+  ```
+  dockers_not_running() { typeset -A x; local y; 
+                          for y in `docker ps -aq`; do x[$y]=1; done; 
+                          for y in `docker ps -q`;  do unset x[$y]; done; echo ${!x[*]}; }
+  docker rm $(dockers_not_running)
+  ```
+  Of course, the following simple recipe will do the same, but will produce warnings as the running containers cannot be removed without the force (-f) option:
+  ```
+  docker rm $(docker ps -aq)
+  ```
+docker network prune
 
 
 ## docker-compose
