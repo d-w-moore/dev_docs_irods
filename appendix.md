@@ -48,7 +48,7 @@ The simplest way to tail lines for iRODS 4.3.0 is :
 
 
 
-GIT PROMPTS
+## Git Prompts
 
 The instructions below can enable useful annotations within the bash prompt:
 
