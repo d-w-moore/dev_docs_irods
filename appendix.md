@@ -1,6 +1,6 @@
-## Appendix
+# Appendix
 
-# tmux
+## tmux
 
   - More about tmux and default/commonly-used key bindings [here](./tmux.md)
 
@@ -13,18 +13,14 @@ Another advantage is that interrupted network connections do not cause a halt to
 any process(es) attached to the console. ( Recovery is simple: just re-connect your
 secure shell and re-attach)
 
-## In a nutshell -
-
+### In a nutshell -
 
 `tmux` terminal  sessions can be
 
   * attached with `tmux a -t<SESSION_NAME_OR_NUMBER>`
   * detached with key combination `<Ctrl-B> <d>`
   * listed via `tmux ls`
-
-
-
-
+---
 # Tailing iRODS logs:
 
 ```
@@ -45,8 +41,7 @@ The simplest way to tail lines for iRODS 4.3.0 is :
 ```
   tail -f /var/log/irods/irods.log |jq .
 ```
-
-
+---
 
 ## Git Prompts
 
