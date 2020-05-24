@@ -18,7 +18,7 @@ secure shell and re-attach)
 
 `tmux` terminal  sessions can be
 
-  * attached with `tmux a -t<SESSION_NAME>`
+  * attached with `tmux a -t<SESSION_NAME_OR_NUMBER>`
   * detached with key combination `<Ctrl-B> <d>`
   * listed via `tmux ls`
 
